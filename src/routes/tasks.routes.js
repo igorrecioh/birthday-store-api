@@ -12,8 +12,8 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   const db = await connect();
   const cumple = {
-    nombre: req.body.Nombre,
-    fecha: req.body.Fecha,
+    nombre: req.body.nombre,
+    fecha: req.body.fecha,
   };
   const result = await db.collection('birthdays').insertOne(cumple);
   res.json('Cumpleaños guardado con id: ' + result.ops[0]._id);
@@ -31,8 +31,8 @@ router.put('/:id', async (req, res) => {
   const db = await connect();
   console.log(req.params.id);
   const cumpleUpdate = {
-    Nombre: req.body.Nombre,
-    Fecha: req.body.Fecha,
+    nombre: req.body.nombre,
+    fecha: req.body.fecha,
   };
   await db.collection('birthdays').findOneAndUpdate(
       {'_id': ObjectID(req.params.id)},

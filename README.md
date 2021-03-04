@@ -3,6 +3,7 @@
 
 [![Build Status](https://github.com/igorrecioh/birthday-store-api/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/igorrecioh/birthday-store-api/actions/workflows/node.js.yml)
 
+## Setup
 1. Clone repository
 2. Go to folder
 ```bash
@@ -26,3 +27,45 @@ NOTE: Remember to change them accordingly in Dockerfile and docker-compose.yml f
 ```bash
 docker compose up -d
 ```
+
+## Usage
+### Mongo-Express
+```bash
+localhost:8081
+```
+### Index
+```bash
+localhost:3000
+```
+
+### API Rest
+- Get all birthdays
+```bash
+localhost:3000/cumples (GET request)
+```
+- Post new birthday
+  ```json
+  {
+    nombre: blah,
+    fecha: 01/02/1234
+  }
+  ```
+  Query
+  ```bash
+  localhost:3000/cumples (POST request)
+  ```
+- Delete birthday by id
+```bash
+localhost:3000/cumples/{id} (DELETE request)
+```
+- Update birthday by id
+  ```json
+  {
+    nombre: blah,
+    fecha: 01/02/1234
+  }
+  ```
+  Query
+  ```bash
+  localhost:3000/cumples/{id} (PUT request)
+  ```
