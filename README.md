@@ -1,4 +1,7 @@
 # birthday-store-api
+## Build status
+
+[![Build Status](https://github.com/igorrecioh/birthday-store-api/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/igorrecioh/birthday-store-api/actions/workflows/node.js.yml)
 
 1. Clone repository
 2. Go to folder
